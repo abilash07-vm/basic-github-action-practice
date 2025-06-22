@@ -6,5 +6,10 @@ jobs:
     steps:
       - name: say-hello
         run: echo "Hello!"
+      - name: do-something
+        run: |
+            touch temp.txt
+            echo "test the multi line command from yaml" > temp.txt
+            cat temp.txt
       - name: say-good-bye
         run: echo "Good Bye!"
